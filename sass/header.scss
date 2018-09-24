@@ -1,0 +1,142 @@
+.header {
+	height: 105vh;
+	margin-bottom: 150px;
+	background-image: url(image/header__bg.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	grid-template-rows: 15px repeat(11, 1fr);
+	@media (min-width: $mediaS) {
+	background-position: bottom center;
+		// background-size: 110% auto;
+
+	}
+	.header__logo {
+		grid-area: 2/2/span 1/7;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		color: var(--white);
+		font-weight: 700;
+		background-image: url(image/header__logo.svg);
+		background-repeat: no-repeat;
+		background-size: auto 50%;
+		background-position: left center;
+		@media (min-width: $mediaS) {
+			background-size: auto 80%;
+		}
+	}
+	// .header__logo2 {
+	// 	grid-area: 2/2/span 1/7;
+	// 	display: flex;
+	// 	justify-content: flex-start;
+	// 	align-items: center;
+	// 	color: var(--white);
+	// 	font-weight: 700;
+	// 	background-image: url(image/header__logo2.svg);
+	// 	background-repeat: no-repeat;
+	// 	background-size: auto 70%;
+	// 	background-position: left center;
+	// 	@media (min-width: $mediaS) {
+	// 		display: none;
+	// 	}
+	// }
+	.header__button {
+		grid-area: 2/7/span 1/12;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 0;
+		font-size: 12px;
+		@media (min-width: $mediaS) {
+			font-size: 20px;
+		}
+		li {
+			margin-left: 30px;
+			a {
+				color: var(--white);
+				font-weight: 700;
+			}
+		}
+	}
+	.header__left {
+		grid-area: 4/2/10/12;
+		// border: 1px solid green;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		@media (min-width: $mediaS) {
+			grid-area: 4/2/12/7;
+		}
+		.header__title {
+			margin: 0 0 15px;
+			line-height: 50px;
+			color: var(--white);
+			font-size: 1.2em;
+			text-align: center;
+			@media (min-width: $mediaS) {
+				line-height: 70px;
+				margin: 0 0 30px;
+				font-size: 2em;
+				text-align: left;
+			}
+		}
+		.header__text {
+			line-height: 40px;
+			color: var(--white);
+			margin: 0;
+			text-align: center;
+			font-size: 	14px;
+			margin-top: 20px;
+			@media (min-width: $mediaS) { 
+				margin: 0 0 50px;
+				text-align: left;
+				font-size: 	15px;
+			}
+		}
+		.headerLeft__button {
+			align-self: center;
+			margin-top: 50px;
+			@media (min-width: $mediaS) { 
+				margin-top: 0px;
+			
+			}
+		}
+	}
+	.header__right {
+		grid-area: 9/2/13/12;
+		// border: 1px solid red;
+		display: none;
+		
+		@media (min-width: $mediaS) { 
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			height: auto;
+			align-items: flex-start;
+			grid-area: 4/8/12/12;
+		}
+		img {
+			height: 90%;
+			width: auto;
+			@media (min-width: $mediaS) { 
+				height: auto;
+				width: 100%;
+			}
+
+		}
+
+	}
+	.header__img {
+		grid-area: 7/2/13/12;
+		background: pink;
+		display: flex;
+		justify-content: center;
+		img {
+			height: 100%;
+			max-width: 100%;
+		}
+	}
+}
