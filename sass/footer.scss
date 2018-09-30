@@ -5,7 +5,7 @@
 	background-position: top center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	@media (min-width: $mediaS) {
+	@include media(md){
 		// background-size: 120% auto;
 	}
 	span {
@@ -26,7 +26,7 @@
 		flex-direction: column;
 		margin-top: 100px;
 		align-items: center;
-		@media (min-width: $mediaS) {
+		@include media(md){
 			flex-direction: row;
 			justify-content: space-between;
 		}
@@ -46,8 +46,23 @@
 				width: 150px;
 				margin-left: 0;
 				margin-right: 0;
-				@media (min-width: $mediaS) {
+				@include media(sm){
+					width: 200px;
+				}
+				@include media(md){
 					width: auto;
+				}
+			}
+			.footer__h3 {
+				font-size: 25px;
+				@include media(sm){
+					font-size: 40px;
+				}
+				@include media(md){
+					font-size: 26px;
+				}
+				@include media(lg){
+					font-size: 35px;
 				}
 			}
 			.footer__li {
@@ -55,6 +70,16 @@
 				justify-content: center;
 				align-items: center;
 				margin: 5px 0;
+				font-size: 18px;
+				@include media(sm){
+					font-size: 30px;
+				}
+				@include media(md){
+					font-size: 18px;
+				}
+				@include media(lg){
+					font-size: 25px;
+				}
 			}
 			.footer__redes {
 				
@@ -90,8 +115,15 @@
 		margin: 30px 0;
 		font-size: 	.5em;
 		color: var(--white);
-		@media (min-width: $mediaS) {
+		@include media(sm){
+			font-size: 20px;
+		}
+		@include media(md){
 			font-size: 	.8em;
+		}
+		@include media(lg){
+			margin: 50px 0;
+			font-size: 20px;
 		}
 	}
 }

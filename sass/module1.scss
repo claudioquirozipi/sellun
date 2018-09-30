@@ -1,7 +1,7 @@
 .module	{
 	overflow: hidden;
 	margin-bottom: 	50px;
-	@media (min-width: $mediaS) {
+	@include media(md){
 		margin-bottom: 150px;
 	}
 }
@@ -10,7 +10,7 @@
 	background-size: 300% 110%;
 	background-position: 15% 100%;
 	// padding-bottom: 50px;
-	@media (min-width: $mediaS) {
+	@include media(md){
 		padding-bottom: 20px;
 		padding: 160px 0 20px;
 		background-position: center;
@@ -22,12 +22,13 @@
 		// background: green;
 	}
 	.module1__text {
-		width: 450px;
+		
 		// background: #000;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		@media (min-width: $mediaS) {
+		@include media(md){
+			width: 450px;
 			align-items: flex-start;
 		}
 
@@ -48,12 +49,12 @@
 			width: 100%;
 			height: auto;
 			margin-bottom: 50px;
-			@media (min-width: $mediaS) {
+			@include media(md){
 				margin-bottom: 0;
 			}
 		}
 		.ampliarSvg {
-			@media (min-width: $mediaS) {
+			@include media(md){
 				// transform: scale(1.5);
 				// transform-origin: bottom right;
 			}	

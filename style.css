@@ -1,3 +1,28 @@
+/*
+Theme Name: Sellboot
+Author: Ing Claudio Quiroz
+Author URI: http://www.hostinger.com/tutorials
+Description: css para sellboot
+Version: 1.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+@media (min-width: 360px) {
+  .hola {
+    background: red; } }
+
+@media (min-width: 591px) {
+  .hola2 {
+    background: blue; } }
+
+@media (min-width: 799px) and (orientation: landscape) {
+  .hola3 {
+    background: yellow; } }
+
+@media (min-width: 1400px) and (orientation: landscape) {
+  .hola4 {
+    background: pink; } }
+
 :root {
   --white: #fff;
   --black: #000;
@@ -19,7 +44,7 @@ a {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 50px; }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .titlePrimary {
       font-size: 2.5rem;
       margin-bottom: 100px; } }
@@ -30,7 +55,11 @@ a {
   text-align: center;
   font-weight: 700;
   line-height: 60px; }
-  @media (min-width: 600px) {
+  @media (min-width: 591px) {
+    .titleSecondary {
+      font-size: 3rem;
+      margin-bottom: 30px; } }
+  @media (min-width: 799px) and (orientation: landscape) {
     .titleSecondary {
       text-align: left;
       font-size: 2rem;
@@ -42,34 +71,78 @@ a {
   font-weight: 700;
   line-height: 40px;
   color: var(--white); }
-  @media (min-width: 600px) {
+  @media (min-width: 591px) {
+    .titleThird {
+      font-size: 2.2rem;
+      line-height: 60px; } }
+  @media (min-width: 799px) and (orientation: landscape) {
     .titleThird {
       font-size: 1.5rem;
-      margin-bottom: 20px;
-      line-height: 60px; } }
+      margin-bottom: 20px; } }
+  @media (min-width: 1400px) and (orientation: landscape) {
+    .titleThird {
+      font-size: 2.2rem;
+      line-height: 70px; } }
 
 .textPrimary {
-  line-height: 40px; }
+  line-height: 40px;
+  font-size: 16px; }
+  @media (min-width: 591px) {
+    .textPrimary {
+      font-size: 30px;
+      text-align: center;
+      line-height: 50px; } }
+  @media (min-width: 799px) and (orientation: landscape) {
+    .textPrimary {
+      font-size: 16px;
+      line-height: 40px;
+      text-align: left; } }
+  @media (min-width: 1400px) and (orientation: landscape) {
+    .textPrimary {
+      font-size: 20px; } }
 
 .textSecondary {
   font-size: .7rem;
   line-height: 25px;
   color: var(--white); }
-  @media (min-width: 600px) {
+  @media (min-width: 591px) {
     .textSecondary {
-      font-size: 1.15rem;
-      line-height: 35px; } }
+      font-size: 1.3rem;
+      line-height: 55px; } }
+  @media (min-width: 799px) and (orientation: landscape) {
+    .textSecondary {
+      font-size: 1.15rem; } }
+  @media (min-width: 1400px) and (orientation: landscape) {
+    .textSecondary {
+      font-size: 1.4rem; } }
 
 .btn {
   background: var(--white);
   color: var(--purple);
-  padding: 10px 30px;
+  padding: 8px 28px;
   border-radius: 50px;
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
   transition: transform .1s;
-  font-weight: 700; }
+  font-weight: 700;
+  font-size: 16px;
+  border: 4px solid var(--white);
+  outline: none; }
   .btn:hover {
     transform: scale(1.05); }
+  .btn:active {
+    background: var(--purple);
+    color: var(--white); }
+  @media (min-width: 591px) {
+    .btn {
+      font-size: 30px;
+      padding: 10px 28px; } }
+  @media (min-width: 799px) and (orientation: landscape) {
+    .btn {
+      padding: 8px 28px;
+      font-size: 20px; } }
+  @media (min-width: 1400px) and (orientation: landscape) {
+    .btn {
+      font-size: 23px; } }
 
 .card {
   background: var(--white);
@@ -84,9 +157,20 @@ a {
   justify-content: flex-start;
   transition: transform .3s;
   margin-bottom: 50px; }
-  @media (min-width: 600px) {
+  @media (min-width: 591px) {
     .card {
-      width: 23%; } }
+      width: 400px;
+      height: 500px;
+      padding: 40px 60px; } }
+  @media (min-width: 799px) and (orientation: landscape) {
+    .card {
+      width: 23%;
+      padding: 20px 30px;
+      height: 350px; } }
+  @media (min-width: 1400px) and (orientation: landscape) {
+    .card {
+      height: 400px;
+      padding: 20px 30px 0; } }
   .card:hover {
     transform: scale(1.05); }
   .card img {
@@ -94,13 +178,31 @@ a {
   .card h3 {
     color: #7177BF;
     margin: 35px 0 20px; }
+    @media (min-width: 591px) {
+      .card h3 {
+        font-size: 35px; } }
+    @media (min-width: 799px) and (orientation: landscape) {
+      .card h3 {
+        font-size: 25px; } }
+    @media (min-width: 1400px) and (orientation: landscape) {
+      .card h3 {
+        font-size: 30px; } }
   .card p {
     text-align: center;
     margin: 0; }
+    @media (min-width: 591px) {
+      .card p {
+        font-size: 30px; } }
+    @media (min-width: 799px) and (orientation: landscape) {
+      .card p {
+        font-size: 17px; } }
+    @media (min-width: 1400px) and (orientation: landscape) {
+      .card p {
+        font-size: 23px; } }
 
 .pb {
   padding-bottom: 150px; }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .pb {
       padding-bottom: 0; } }
 
@@ -126,7 +228,7 @@ a {
   justify-content: center;
   align-items: center;
   transition: all linear 1s; }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .cqLeft {
       transform: translateX(-100vw);
       grid-column: 2/7;
@@ -138,7 +240,7 @@ a {
   justify-content: center;
   align-items: center;
   transition: all linear 1s; }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .cqRight {
       transform: translateX(100vw);
       grid-column: 7/12;
@@ -150,7 +252,7 @@ a {
   justify-content: center;
   align-items: center;
   transition: all linear 1s; }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .cqCenter {
       transform: translateX(-100vw); } }
 
@@ -170,7 +272,7 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-direction: column; }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .cqflexBetween {
       flex-direction: row; } }
 
@@ -183,8 +285,12 @@ a {
   background-repeat: no-repeat;
   background-position: bottom center;
   grid-template-rows: 15px repeat(11, 1fr); }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .header {
+      height: 100vh; } }
+  @media (min-width: 799px) and (orientation: landscape) {
+    .header {
+      height: 105vh;
       background-position: bottom center; } }
   .header .header__logo {
     grid-area: 2/2/span 1/7;
@@ -197,7 +303,7 @@ a {
     background-repeat: no-repeat;
     background-size: auto 50%;
     background-position: left center; }
-    @media (min-width: 600px) {
+    @media (min-width: 799px) and (orientation: landscape) {
       .header .header__logo {
         background-size: auto 80%; } }
   .header .header__button {
@@ -206,10 +312,16 @@ a {
     justify-content: flex-end;
     align-items: center;
     padding: 0;
-    font-size: 12px; }
-    @media (min-width: 600px) {
+    font-size: 20px; }
+    @media (min-width: 591px) {
+      .header .header__button {
+        font-size: 30px; } }
+    @media (min-width: 799px) and (orientation: landscape) {
       .header .header__button {
         font-size: 20px; } }
+    @media (min-width: 1400px) and (orientation: landscape) {
+      .header .header__button {
+        font-size: 35px; } }
     .header .header__button li {
       margin-left: 30px; }
       .header .header__button li a {
@@ -221,7 +333,10 @@ a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start; }
-    @media (min-width: 600px) {
+    @media (min-width: 591px) {
+      .header .header__left {
+        grid-area: 4/2/7/12; } }
+    @media (min-width: 799px) and (orientation: landscape) {
       .header .header__left {
         grid-area: 4/2/12/7; } }
     .header .header__left .header__title {
@@ -229,8 +344,12 @@ a {
       line-height: 50px;
       color: var(--white);
       font-size: 1.2em;
-      text-align: center; }
-      @media (min-width: 600px) {
+      text-align: center;
+      width: 100%; }
+      @media (min-width: 591px) {
+        .header .header__left .header__title {
+          font-size: 2.2em; } }
+      @media (min-width: 799px) and (orientation: landscape) {
         .header .header__left .header__title {
           line-height: 70px;
           margin: 0 0 30px;
@@ -243,24 +362,32 @@ a {
       text-align: center;
       font-size: 14px;
       margin-top: 20px; }
-      @media (min-width: 600px) {
+      @media (min-width: 591px) {
+        .header .header__left .header__text {
+          font-size: 20px; } }
+      @media (min-width: 799px) and (orientation: landscape) {
         .header .header__left .header__text {
           margin: 0 0 50px;
           text-align: left;
           font-size: 15px; } }
+      @media (min-width: 1400px) and (orientation: landscape) {
+        .header .header__left .header__text {
+          font-size: 20px; } }
     .header .header__left .headerLeft__button {
       align-self: center;
       margin-top: 50px; }
-      @media (min-width: 600px) {
+      @media (min-width: 799px) and (orientation: landscape) {
         .header .header__left .headerLeft__button {
           margin-top: 0px; } }
   .header .header__right {
-    grid-area: 9/2/13/12;
     display: none; }
-    @media (min-width: 600px) {
+    @media (min-width: 591px) {
       .header .header__right {
         display: flex;
         justify-content: center;
+        grid-area: 8/2/12/12; } }
+    @media (min-width: 799px) and (orientation: landscape) {
+      .header .header__right {
         align-items: flex-end;
         height: auto;
         align-items: flex-start;
@@ -268,7 +395,7 @@ a {
     .header .header__right img {
       height: 90%;
       width: auto; }
-      @media (min-width: 600px) {
+      @media (min-width: 799px) and (orientation: landscape) {
         .header .header__right img {
           height: auto;
           width: 100%; } }
@@ -284,7 +411,7 @@ a {
 .module {
   overflow: hidden;
   margin-bottom: 50px; }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .module {
       margin-bottom: 150px; } }
 
@@ -292,7 +419,7 @@ a {
   background-image: url(image/module__bg.svg);
   background-size: 300% 110%;
   background-position: 15% 100%; }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .module__bg {
       padding-bottom: 20px;
       padding: 160px 0 20px;
@@ -300,12 +427,12 @@ a {
       background-size: 105% auto; } }
 
 .module1 .module1__text {
-  width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center; }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .module1 .module1__text {
+      width: 450px;
       align-items: flex-start; } }
   .module1 .module1__text .module1Text__buttom {
     margin-top: 50px;
@@ -314,7 +441,7 @@ a {
   width: 100%;
   height: auto;
   margin-bottom: 50px; }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .module1 .module1__img img {
       margin-bottom: 0; } }
 
@@ -324,19 +451,19 @@ a {
   background-position: left bottom;
   background-size: auto 120%;
   background-repeat: no-repeat; }
-  @media (min-width: 600px) {
+  @media (min-width: 799px) and (orientation: landscape) {
     .module2 {
       background: #fff; } }
   .module2 .module2__bg {
     display: none; }
-    @media (min-width: 600px) {
+    @media (min-width: 799px) and (orientation: landscape) {
       .module2 .module2__bg {
         display: grid;
         align-items: center;
         grid-area: 1/1/13/13; } }
   .module2 .module2__containerText {
     grid-area: 6/2/11/12; }
-    @media (min-width: 600px) {
+    @media (min-width: 799px) and (orientation: landscape) {
       .module2 .module2__containerText {
         grid-row: 5/11;
         grid-column: 2/7; } }
@@ -347,19 +474,19 @@ a {
       align-items: center; }
       .module2 .module2__containerText .module2__text h2 {
         text-align: center; }
-        @media (min-width: 600px) {
+        @media (min-width: 799px) and (orientation: landscape) {
           .module2 .module2__containerText .module2__text h2 {
             text-align: left; } }
       .module2 .module2__containerText .module2__text p {
         text-align: center;
         margin: 20px 0 45px; }
-        @media (min-width: 600px) {
+        @media (min-width: 799px) and (orientation: landscape) {
           .module2 .module2__containerText .module2__text p {
             margin: 50px 0;
             text-align: left; } }
   .module2 .module2__containerIma {
     grid-area: 1/2/6/12; }
-    @media (min-width: 600px) {
+    @media (min-width: 799px) and (orientation: landscape) {
       .module2 .module2__containerIma {
         grid-row: 3/10;
         grid-column: 7/12; } }
@@ -415,142 +542,159 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10; }
-  .modal .modal__containerForm {
-    max-width: 90%; }
-  .modal .modal__form {
-    max-width: 100%;
-    width: 700px;
-    height: 100%;
-    background: #fff;
-    position: relative;
-    overflow: hidden;
+  z-index: 10000002; }
+
+.modal__containerForm {
+  max-width: 90%; }
+
+.modal__form {
+  max-width: 100%;
+  width: 700px;
+  height: 100%;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3); }
+  @media (min-width: 799px) and (orientation: landscape) {
+    .modal__form {
+      justify-content: center;
+      height: auto; } }
+  .modal__form .container__input {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .modal__form .container__input--visible {
+    display: flex; }
+  .modal__form .modal__bg {
+    position: absolute;
+    opacity: .3;
+    left: -20%;
+    bottom: -20%; }
+    @media (min-width: 799px) and (orientation: landscape) {
+      .modal__form .modal__bg {
+        bottom: -70%; } }
+  .modal__form input, .modal__form label {
+    height: 50px;
+    padding: 0 25px;
+    color: #3b3873;
+    z-index: 20;
+    margin: 8px 0;
+    border: 3px solid var(--purple);
+    border-radius: 50px;
+    font-weight: 700;
+    outline: none; }
+    .modal__form input::placeholder, .modal__form label::placeholder {
+      color: #b7b5db;
+      font-weight: 700; }
+  .modal__form input[type="text"], .modal__form input[type="email"], .modal__form input[type="tel"], .modal__form input[type="password"] {
+    width: 250px; }
+    @media (min-width: 591px) {
+      .modal__form input[type="text"], .modal__form input[type="email"], .modal__form input[type="tel"], .modal__form input[type="password"] {
+        width: 400px; } }
+    @media (min-width: 799px) and (orientation: landscape) {
+      .modal__form input[type="text"], .modal__form input[type="email"], .modal__form input[type="tel"], .modal__form input[type="password"] {
+        width: 300px; } }
+  .modal__form input[type="submit"] {
+    width: 140px;
+    color: var(--white);
+    background: var(--purple);
+    cursor: pointer;
+    transition: all .3s; }
+    .modal__form input[type="submit"]:hover {
+      transform: scale(1.1); }
+    .modal__form input[type="submit"]:active {
+      background: var(--white);
+      color: var(--purple); }
+  .modal__form input[type="radio"] {
+    display: none; }
+  .modal__form label {
+    color: #b7b5db;
+    width: 135px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s; }
+    @media (min-width: 799px) and (orientation: landscape) {
+      .modal__form label {
+        width: 160px; } }
+  .modal__form input:checked + label {
+    color: var(--white);
+    background: var(--purple);
+    cursor: pointer; }
+  .modal__form .container__cerrar {
+    width: 90%;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end; }
+    .modal__form .container__cerrar .cerrar {
+      cursor: pointer; }
+  .modal__form .container__radio {
+    display: flex;
+    justify-content: space-between;
+    width: 300px; }
+    @media (min-width: 591px) {
+      .modal__form .container__radio {
+        width: 450px; } }
+    @media (min-width: 799px) and (orientation: landscape) {
+      .modal__form .container__radio {
+        width: 350px; } }
+  .modal__form .modal__login {
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    z-index: 10; }
+    .modal__form .modal__login:hover {
+      color: var(--purple); }
+  .modal__form .felicidades {
+    background: var(--purple);
+    width: 300px;
+    height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    border-radius: 30px;
-    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3); }
-    @media (min-width: 600px) {
-      .modal .modal__form {
-        justify-content: center;
-        height: auto; } }
-    .modal .modal__form .container__input {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-    .modal .modal__form .container__input--visible {
-      display: flex; }
-    .modal .modal__form .modal__bg {
-      position: absolute;
-      opacity: .3;
-      left: -20%;
-      bottom: -20%; }
-      @media (min-width: 600px) {
-        .modal .modal__form .modal__bg {
-          bottom: -70%; } }
-    .modal .modal__form input, .modal .modal__form label {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 50px; }
+    @media (min-width: 799px) and (orientation: landscape) {
+      .modal__form .felicidades {
+        width: 350px; } }
+    .modal__form .felicidades img {
+      width: 50px;
       height: 50px;
-      padding: 0 25px;
-      color: #3b3873;
-      z-index: 20;
-      margin: 8px 0;
-      border: 3px solid var(--purple);
-      border-radius: 50px;
-      font-weight: 700;
-      outline: none; }
-      .modal .modal__form input::placeholder, .modal .modal__form label::placeholder {
-        color: #b7b5db;
-        font-weight: 700; }
-    .modal .modal__form input[type="text"], .modal .modal__form input[type="email"], .modal .modal__form input[type="tel"], .modal .modal__form input[type="password"] {
-      width: 250px; }
-      @media (min-width: 600px) {
-        .modal .modal__form input[type="text"], .modal .modal__form input[type="email"], .modal .modal__form input[type="tel"], .modal .modal__form input[type="password"] {
-          width: 300px; } }
-    .modal .modal__form input[type="submit"] {
-      width: 140px;
+      position: absolute;
+      top: 0;
+      left: center;
+      transform: translate(0%, 50%);
+      background: #fff;
+      border-radius: 50%; }
+    .modal__form .felicidades h2 {
       color: var(--white);
-      background: var(--purple);
-      cursor: pointer;
-      transition: all .3s; }
-      .modal .modal__form input[type="submit"]:hover {
-        transform: scale(1.1); }
-      .modal .modal__form input[type="submit"]:active {
-        background: var(--white);
-        color: var(--purple); }
-    .modal .modal__form input[type="radio"] {
-      display: none; }
-    .modal .modal__form label {
-      color: #b7b5db;
-      width: 135px;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all .4s; }
-      @media (min-width: 600px) {
-        .modal .modal__form label {
-          width: 160px; } }
-    .modal .modal__form input:checked + label {
-      color: var(--white);
-      background: var(--purple);
-      cursor: pointer; }
-    .modal .modal__form .container__cerrar {
-      width: 90%;
-      margin-bottom: 15px;
-      margin-top: 20px;
-      display: flex;
-      justify-content: flex-end; }
-      .modal .modal__form .container__cerrar .cerrar {
-        cursor: pointer; }
-    .modal .modal__form .container__radio {
-      display: flex;
-      justify-content: space-between;
-      width: 300px; }
-      @media (min-width: 600px) {
-        .modal .modal__form .container__radio {
-          width: 350px; } }
-    .modal .modal__form .modal__login {
-      font-weight: 700;
-      cursor: pointer;
-      margin-top: 15px;
-      margin-bottom: 50px;
-      z-index: 10; }
-      .modal .modal__form .modal__login:hover {
-        color: var(--purple); }
-    .modal .modal__form .felicidades {
-      background: var(--purple);
-      width: 300px;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      margin-bottom: 50px;
-      border-radius: 50px; }
-      @media (min-width: 600px) {
-        .modal .modal__form .felicidades {
-          width: 350px; } }
-      .modal .modal__form .felicidades img {
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        top: 0;
-        left: center;
-        transform: translate(0%, 50%);
-        background: #fff;
-        border-radius: 50%; }
-      .modal .modal__form .felicidades h2 {
-        color: var(--white);
-        padding: 10px 15px;
-        text-align: center; }
-    .modal .modal__form .login {
-      margin-bottom: 50px; }
+      padding: 10px 15px;
+      text-align: center; }
+  .modal__form .login {
+    margin-bottom: 50px; }
 
 .modalVisible {
   top: 0;
-  background: rgba(0, 0, 0, 0.4); }
+  background: #3b3873; }
+
+.main__enviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #3b3873; }
 
 .footer {
   width: 100%;
@@ -575,7 +719,7 @@ a {
     flex-direction: column;
     margin-top: 100px;
     align-items: center; }
-    @media (min-width: 600px) {
+    @media (min-width: 799px) and (orientation: landscape) {
       .footer .footer__container {
         flex-direction: row;
         justify-content: space-between; } }
@@ -593,14 +737,38 @@ a {
         width: 150px;
         margin-left: 0;
         margin-right: 0; }
-        @media (min-width: 600px) {
+        @media (min-width: 591px) {
+          .footer .footer__container .footer__ul .footer__li, .footer .footer__container .footer__ul .footer__h3 {
+            width: 200px; } }
+        @media (min-width: 799px) and (orientation: landscape) {
           .footer .footer__container .footer__ul .footer__li, .footer .footer__container .footer__ul .footer__h3 {
             width: auto; } }
+      .footer .footer__container .footer__ul .footer__h3 {
+        font-size: 25px; }
+        @media (min-width: 591px) {
+          .footer .footer__container .footer__ul .footer__h3 {
+            font-size: 40px; } }
+        @media (min-width: 799px) and (orientation: landscape) {
+          .footer .footer__container .footer__ul .footer__h3 {
+            font-size: 26px; } }
+        @media (min-width: 1400px) and (orientation: landscape) {
+          .footer .footer__container .footer__ul .footer__h3 {
+            font-size: 35px; } }
       .footer .footer__container .footer__ul .footer__li {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 5px 0; }
+        margin: 5px 0;
+        font-size: 18px; }
+        @media (min-width: 591px) {
+          .footer .footer__container .footer__ul .footer__li {
+            font-size: 30px; } }
+        @media (min-width: 799px) and (orientation: landscape) {
+          .footer .footer__container .footer__ul .footer__li {
+            font-size: 18px; } }
+        @media (min-width: 1400px) and (orientation: landscape) {
+          .footer .footer__container .footer__ul .footer__li {
+            font-size: 25px; } }
       .footer .footer__container .footer__ul .footer__redes {
         width: 30px;
         height: 30px;
@@ -625,8 +793,15 @@ a {
     margin: 30px 0;
     font-size: .5em;
     color: var(--white); }
-    @media (min-width: 600px) {
+    @media (min-width: 591px) {
+      .footer .footer__copyright {
+        font-size: 20px; } }
+    @media (min-width: 799px) and (orientation: landscape) {
       .footer .footer__copyright {
         font-size: .8em; } }
+    @media (min-width: 1400px) and (orientation: landscape) {
+      .footer .footer__copyright {
+        margin: 50px 0;
+        font-size: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

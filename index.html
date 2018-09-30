@@ -95,6 +95,14 @@
 		</div>
 
 	</header>
+
+	<!-- ***********Start-Código para hacer pruebas con las media querys *********** -->
+	<!-- <div class="hola3">Hola</div>
+	<div class="hola2">Hola</div>
+	<div class="hola">Hola</div>
+	<div class="hola4">Hola</div> -->
+	<!-- ***********End-Código para hacer pruebas con las media querys *********** -->
+
 	<div id="modal" class="modal">
 		<div class="modal__containerForm">
 
@@ -107,25 +115,23 @@
 				</div>	
 
 				<form 
-				enctype="application/x-www-form-urlencoded" 
-				action="https://sellboot.ip-zone.com/ccm/subscribe/index/form/u83osupsas" 
+				action="./enviar.php" 
 				method="post" 
 				class="container__input container__input--visible" 
 				id="container__input1">
-					<input type="hidden" name="groups[]" value="3">
+					
 					<div class="container__radio">
-						<input type="radio" id="radio1" name="drone" checked />
+						<input type="radio" id="radio1" name="Seller" checked value="Seller"/>
 						<label for="radio1">Seller</label>
-			            <input type="radio" id="radio2" name="drone" />
+			            <input type="radio" id="radio2" name="Seller" value="Enterprice"/>
 			            <label for="radio2">Enterprice</label>
 					</div>
-					<input type="text" placeholder="Empresa">
+					<input type="text" required placeholder="Empresa" name="Empresa">
 					<input type="email" required placeholder="Email" name="email" id="email">
-					<input type="tel" placeholder="Phone" name="name" id="name">
-					<input type="text" placeholder="Contry">
+					<input type="tel" required placeholder="Phone" name="Phone" id="name">
+					<input type="text" required placeholder="Contry" name="Contry">
 					<input type="submit" value="Login" name="submit" id="submit">
 					<div class="modal__login" id="modal__login">Login</div>
-					<input type="hidden" name="successUrl" value="http://www.sellboot.com/company.html" id="successUrl">
 				</form>
 
 				<form action="" class="container__input" id="container__input2">

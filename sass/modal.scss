@@ -10,171 +10,193 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 10;
-	.modal__containerForm {
-		max-width: 90%;
-		// height: 80%;
+	z-index: 10000002;
+}
+.modal__containerForm {
+	max-width: 90%;
+	// height: 80%;
+}
+.modal__form {
+	max-width: 100%;
+	width: 700px;
+	height: 100%;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 30px;
+	box-shadow: $shadow;
+	@include media(md){
+		justify-content: center;
+		height: auto;
 	}
-	.modal__form {
-		max-width: 100%;
-		width: 700px;
-		height: 100%;
-		background: #fff;
-		position: relative;
-		overflow: hidden;
-		display: flex;
+	.container__input {
+		display: none;
 		flex-direction: column;
-		justify-content: flex-start;
+		justify-content: center;
 		align-items: center;
-		border-radius: 30px;
-		box-shadow: $shadow;
-		@media (min-width: $mediaS) {
-			justify-content: center;
-			height: auto;
+	}
+	.container__input--visible {
+		display: flex;
+	}
+	.modal__bg {
+		position: absolute;
+		opacity: .3;
+		left: -20%;
+		bottom: -20%;
+		@include media(md){
+		bottom: -70%;
 		}
-		.container__input {
-			display: none;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-		.container__input--visible {
-			display: flex;
-		}
-		.modal__bg {
-			position: absolute;
-			opacity: .3;
-			left: -20%;
-			bottom: -20%;
-			@media (min-width: $mediaS) {
-			bottom: -70%;
-			}
-		}
-		input, label{
-			height: 50px;
-			padding: 0 25px;
-			color: darken($purple, 15%);
-			z-index: 20;
-			margin: 8px 0;
-			border: 3px solid var(--purple);
-			border-radius: 50px;
+	}
+	input, label{
+		height: 50px;
+		padding: 0 25px;
+		color: darken($purple, 15%);
+		z-index: 20;
+		margin: 8px 0;
+		border: 3px solid var(--purple);
+		border-radius: 50px;
+		font-weight: 700;
+		outline: none;
+		&::placeholder {
+			color: lighten($purple, 30%);
 			font-weight: 700;
-			outline: none;
-			&::placeholder {
-				color: lighten($purple, 30%);
-				font-weight: 700;
-			}
 		}
-		input[type="text"], input[type="email"], input[type="tel"], input[type="password"]{
-			width: 	250px;
-			@media (min-width: $mediaS) {
-				width: 300px;
-			}
+	}
+	input[type="text"], input[type="email"], input[type="tel"], input[type="password"]{
+		width: 	250px;
+		@include media(sm){
+			width: 400px;
 		}
-		input[type="submit"] {
-			width: 140px;
+		@include media(md){
+			width: 300px;
+		}
+	}
+	input[type="submit"] {
+		width: 140px;
+		color: var(--white);
+		background: var(--purple);
+		cursor: pointer;
+		transition: all .3s;			
+		&:hover {
+			transform: scale(1.1);
+		}
+		&:active {
+			background: var(--white);
+			color: var(--purple);
+		}
+
+	}
+	input[type="radio"] {
+		display: none;
+	}
+	label {
+		color: lighten($purple, 30%);
+		width: 135px;
+		padding: 0;
+		display: flex; 
+		justify-content: center;
+		align-items: center;
+		transition: all .4s;
+		@include media(md){
+			width: 	160px;
+		}
+	}
+	input:checked {
+		+ label {
 			color: var(--white);
 			background: var(--purple);
 			cursor: pointer;
-			transition: all .3s;			
-			&:hover {
-				transform: scale(1.1);
-			}
-			&:active {
-				background: var(--white);
-				color: var(--purple);
-			}
-
-		}
-		input[type="radio"] {
-			display: none;
-		}
-		label {
-			color: lighten($purple, 30%);
-			width: 135px;
-			padding: 0;
-			display: flex; 
-			justify-content: center;
-			align-items: center;
-			transition: all .4s;
-			@media (min-width: $mediaS) {
-				width: 	160px;
-			}
-		}
-		input:checked {
-			+ label {
-				color: var(--white);
-				background: var(--purple);
-				cursor: pointer;
-			}
-		}
-		.container__cerrar {
-			width: 90%;
-			margin-bottom: 15px;
-			margin-top: 20px;
-			display: flex;
-			justify-content: flex-end;
-			.cerrar {
-				cursor: pointer;
-				// position: absolute;
-				// top: 3px;
-				// right: 5%;
-			}
-		}
-		.container__radio {
-			display: flex; 
-			justify-content: space-between;
-			width: 	300px;
-			@media (min-width: $mediaS) {
-				width: 350px;
-			}
-		}
-		.modal__login {
-			font-weight: 700;
-			cursor: pointer;
-			margin-top: 15px;
-			margin-bottom: 50px;
-			z-index: 10;
-			&:hover {
-				color: var(--purple);
-			}
-		}
-		.felicidades {
-			background: var(--purple);
-			width: 300px;
-			height: 300px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: relative;
-			margin-bottom: 50px;
-			border-radius: 50px;
-			@media (min-width: $mediaS) {
-				width: 350px;
-			}
-			img {
-				width: 50px;
-				height: 50px;
-				position: absolute;
-				top: 0;
-				left: center;
-				transform: translate(-0%, 50%);
-				background: #fff;
-				border-radius: 50%;
-			}
-			h2 {
-				color: var(--white);
-				padding: 10px 15px;
-				text-align: center;
-			}
-		}
-		.login {
-			margin-bottom: 50px;
 		}
 	}
+	.container__cerrar {
+		width: 90%;
+		margin-bottom: 15px;
+		margin-top: 20px;
+		display: flex;
+		justify-content: flex-end;
+		.cerrar {
+			cursor: pointer;
+			// position: absolute;
+			// top: 3px;
+			// right: 5%;
+		}
+	}
+	.container__radio {
+		display: flex; 
+		justify-content: space-between;
+		width: 	300px;
+		@include media(sm){
+			width: 450px;
+		}
+		@include media(md){
+			width: 350px;
+		}
+	}
+	.modal__login {
+		font-weight: 700;
+		cursor: pointer;
+		margin-top: 15px;
+		margin-bottom: 50px;
+		z-index: 10;
+		&:hover {
+			color: var(--purple);
+		}
+	}
+	.felicidades {
+		background: var(--purple);
+		width: 300px;
+		height: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		border-radius: 50px;
+		@include media(md){
+			width: 350px;
+		}
+		img {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			left: center;
+			transform: translate(-0%, 50%);
+			background: #fff;
+			border-radius: 50%;
+		}
+		h2 {
+			color: var(--white);
+			padding: 10px 15px;
+			text-align: center;
+		}
+	}
+	.login {
+		margin-bottom: 50px;
+	}
 }
+
 .modalVisible {
 	top: 0;
-	background: rgba(0,0,0,.4);
+	
+	background: darken($purple, 15%);
+	
 	// transition: background .5s, top .5s .5s;
+}
+
+
+.main__enviar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: darken($purple, 15%);
+	// $darken : var(--purple);
+	// background: darken($color: $darken, $amount: 10%);
 }

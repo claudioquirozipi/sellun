@@ -46,3 +46,5 @@ agregar.addEventListener("click", () => {
 	form2.className = "container__input";	
 	form3.className = "container__input container__input--visible";
 })
+
+
