@@ -576,6 +576,9 @@ a {
     opacity: .3;
     left: -20%;
     bottom: -20%; }
+    @media (min-width: 591px) {
+      .modal__form .modal__bg {
+        bottom: -250px; } }
     @media (min-width: 799px) and (orientation: landscape) {
       .modal__form .modal__bg {
         bottom: -70%; } }
@@ -611,6 +614,9 @@ a {
     .modal__form input[type="submit"]:active {
       background: var(--white);
       color: var(--purple); }
+    @media (min-width: 799px) and (orientation: landscape) {
+      .modal__form input[type="submit"] {
+        margin-bottom: 40px; } }
   .modal__form input[type="radio"] {
     display: none; }
   .modal__form label {
@@ -655,7 +661,7 @@ a {
     .modal__form .modal__login:hover {
       color: var(--purple); }
   .modal__form .felicidades {
-    background: var(--purple);
+    background: transparent;
     width: 300px;
     height: 300px;
     display: flex;
@@ -679,7 +685,7 @@ a {
       background: #fff;
       border-radius: 50%; }
     .modal__form .felicidades h2 {
-      color: var(--white);
+      color: var(--purple);
       padding: 10px 15px;
       text-align: center; }
   .modal__form .login {
