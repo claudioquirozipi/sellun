@@ -324,7 +324,7 @@ a {
         font-size: 35px; } }
     .header .header__button li {
       margin-left: 30px; }
-      .header .header__button li a {
+      .header .header__button li > a {
         color: var(--white);
         font-weight: 700; }
   .header .header__left {
@@ -701,6 +701,81 @@ a {
   align-items: center;
   height: 100vh;
   background: #3b3873; }
+
+.menu__Datos {
+  margin-bottom: 0;
+  color: var(--purple);
+  font-size: 18px;
+  margin: 0px 0;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  padding: 15px 0;
+  border-radius: 5px; }
+  .menu__Datos:hover {
+    background: var(--purple);
+    color: var(--white); }
+
+.menu__ContainerDatos {
+  transform-origin: top right;
+  width: 150px; }
+
+.menu__Banderas {
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  background-size: cover;
+  border-radius: 3px;
+  margin-bottom: 20px; }
+  .menu__Banderas:nth-child(1) {
+    background-image: url("./image/USA.jpg"); }
+  .menu__Banderas:nth-child(2) {
+    background-image: url("./image/ESP.jpg"); }
+  .menu__Banderas:nth-child(3) {
+    background-image: url("./image/BRA.jpg"); }
+
+.menu__ContainerBanderas {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.menu__Desplegable {
+  padding: 15px;
+  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  transform-origin: top right;
+  transform: scaleX(0) translate(0, 0);
+  transition: .1s linear;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  z-index: 10; }
+
+.menu__Desplegable--show {
+  transition: .1s linear;
+  transform: scaleX(1) translate(0, 0); }
+
+.menu__Circle {
+  width: 5px;
+  height: 5px;
+  background: var(--white);
+  border-radius: 50%;
+  margin-bottom: 3px; }
+
+.menu__ContainerCircle {
+  min-width: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer; }
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  position: relative; }
 
 .footer {
   width: 100%;
