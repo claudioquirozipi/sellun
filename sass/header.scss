@@ -1,18 +1,17 @@
 .header {
 	height: 105vh;
 	margin-bottom: 150px;
-	background-image: url(image/header__bg.svg);
+	background: var(--purple);
+	background-image: url(image/header__bgMobile.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: bottom center;
+	background-position: center;
 	grid-template-rows: 15px repeat(11, 1fr);
 	@include media(md){
-		height: 100vh;
-	}
-	@include media(md){
-		height: 105vh;
-		background-position: bottom center;
+		height: 90vh;
+		background-image: url(image/header__bg.svg);
+		background-position: center;
 
 	}
 	.header__logo {
@@ -28,6 +27,9 @@
 		background-position: left center;
 		@include media(md){
 			background-size: auto 80%;
+		}
+		@include media(lg) {
+			background-size: auto 60%;
 		}
 	}
 	// .header__logo2 {
@@ -76,6 +78,7 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
+		z-index: 2;
 		@include media(sm){
 			grid-area: 4/2/7/12;
 		}
@@ -83,14 +86,16 @@
 			grid-area: 4/2/12/7;
 		}
 		.header__title {
-			margin: 0 0 15px;
-			line-height: 50px;
+			margin: 0;
+			line-height: 30px;
 			color: var(--white);
 			font-size: 1.2em;
-			text-align: center;
+			text-align: left;
 			width: 100%;
 			@include media(sm){
 				font-size: 2.2em;
+				line-height: 50px;
+				text-align: center;
 			}
 			@include media(md){
 				line-height: 70px;
@@ -100,14 +105,16 @@
 			}
 		}
 		.header__text {
-			line-height: 40px;
+			line-height: 25px;
 			color: var(--white);
-			margin: 0;
-			text-align: center;
-			font-size: 	14px;
-			margin-top: 20px;
+			margin: 15px 0 0 0;
+			text-align: left;
+			font-size: 	11px;
 			@include media(sm){
 				font-size: 20px;
+				margin: 40px 0 ;
+				line-height: 40px;
+				text-align: center;
 			}
 			@include media(md){ 
 				margin: 0 0 50px;
@@ -120,7 +127,7 @@
 		}
 		.headerLeft__button {
 			align-self: center;
-			margin-top: 50px;
+			margin-top: 25px;
 			@include media(md){ 
 				margin-top: 0px;
 			
@@ -128,41 +135,33 @@
 		}
 	}
 	.header__right {
-		// border: 1px solid red;
-		display: none;
+		grid-area: 8/1/13/13;
+		background-image: url("image/header__imgMobile.svg");
+		background-size: 110% auto;
+		background-position: 0 0;
+		background-repeat: no-repeat;
 		@include media(sm){ 
-			display: flex;
-			justify-content: center;
-			grid-area: 8/2/12/12;
+			background-position: center top;
+			background-size: 80% auto;
 		}
-
 		@include media(md){ 
-			
-			
-			align-items: flex-end;
-			height: auto;
-			align-items: flex-start;
-			grid-area: 4/8/12/12;
+			background-image: url("image/header__img.svg");
+			background-position: 0 0;
+			background-size: 110% auto;
+			grid-area: 1/7/13/13;
 		}
-		img {
-			height: 90%;
-			width: auto;
-			@include media(md){ 
-				height: auto;
-				width: 100%;
-			}
-
-		}
-
 	}
-	.header__img {
-		grid-area: 7/2/13/12;
-		background: pink;
-		display: flex;
-		justify-content: center;
-		img {
-			height: 100%;
-			max-width: 100%;
+	.header__white {
+		grid-column: 1/13;
+		grid-row: 9/13;
+		background-image: url("image/header__white.svg");
+		background-size: 100% auto;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		// display: none;
+		transform: translateY(1px);
+		@include media(md) {
+			display: block;
 		}
 	}
 }

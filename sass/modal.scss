@@ -1,6 +1,7 @@
 .modal {
-	height: 100vh;
+	height: 100%;
 	width: 100vw;
+	overflow-y: scroll;
 	background: trasparent;
 	position: fixed;
 	top: -200%;

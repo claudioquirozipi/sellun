@@ -77,6 +77,11 @@
 	background: var(--white);
 	border-radius: 50%;
 	margin-bottom: 3px;
+	@include media(lg) {
+		width: 7px;
+		height: 7px;
+		margin-bottom: 5px;
+	}
 }
 .menu__ContainerCircle {
 	// border: 1px solid red;
