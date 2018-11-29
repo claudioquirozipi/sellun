@@ -277,7 +277,7 @@ a {
       flex-direction: row; } }
 
 .header {
-  height: 105vh;
+  height: 667px;
   margin-bottom: 150px;
   background: var(--purple);
   background-image: url(image/header__bgMobile.svg);
@@ -286,6 +286,9 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   grid-template-rows: 15px repeat(11, 1fr); }
+  @media (min-width: 591px) {
+    .header {
+      height: 105vh; } }
   @media (min-width: 799px) and (orientation: landscape) {
     .header {
       height: 90vh;

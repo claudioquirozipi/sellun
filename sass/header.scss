@@ -1,5 +1,5 @@
 .header {
-	height: 105vh;
+	height: 667px;
 	margin-bottom: 150px;
 	background: var(--purple);
 	background-image: url(image/header__bgMobile.svg);
@@ -8,6 +8,9 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	grid-template-rows: 15px repeat(11, 1fr);
+	@include media(sm) {
+		height: 105vh;
+	}
 	@include media(md){
 		height: 90vh;
 		background-image: url(image/header__bg.svg);
