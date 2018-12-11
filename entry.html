@@ -119,6 +119,52 @@
 		</div>
 		<div class="header__white"></div>
 	</header>
+	<div id="modal" class="modal">
+		<div class="modal__containerForm">
+
+
+			<div class="modal__form">
+				
+				<img src="image/modal__bg.svg" alt="" class="modal__bg">
+				<div class="container__cerrar">
+					<img src="image/cerrar.svg" id="cerrar" class="cerrar" alt="clouse">
+				</div>	
+
+				<form 
+				action="./enviar.php" 
+				method="post" 
+				class="container__input container__input--visible" 
+				id="container__input1">
+					
+					<div class="container__radio">
+						<input type="radio" id="radio1" name="Seller" checked value="Seller"/>
+						<label for="radio1">Seller</label>
+			            <input type="radio" id="radio2" name="Seller" value="Enterprice"/>
+			            <label for="radio2">Enterprice</label>
+					</div>
+					<input type="text" required placeholder="Empresa" name="Empresa">
+					<input type="email" required placeholder="Email" name="email" id="email">
+					<input type="tel" required placeholder="Phone" name="Phone" id="name">
+					<input type="text" required placeholder="Contry" name="Contry">
+					<input type="submit" value="Login" name="submit" id="submit">
+					<!-- <div class="modal__login" id="modal__login">Login</div> -->
+				</form>
+
+				<form action="" class="container__input" id="container__input2">
+					<input type="text" placeholder="User">
+					<input type="password" placeholder="Password">
+					<input type="submit"  id="modal__cargar" class="login">
+				</form>
+				<div class="container__input" id="container__input3">
+					<div class="felicidades">
+						<img src="image/checked__ok.svg" alt="check">
+						<h2>Felicidades<br> te has suscrito correctamente</h2>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
 	<!-- ***************Start-Entry********************* -->
 	<div class="entryContainer">
 		<div class="entry">
